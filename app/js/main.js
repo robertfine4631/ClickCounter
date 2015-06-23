@@ -10,8 +10,20 @@
       //Make counting function
       $scope.addLike = function () {
         $scope.likes += 1;
+        $scope.checkP(); // Checks pluralirty on every click
       };
 
+
+      //Start of pluralization function
+      $scope.checkP = function () {
+        if ($scope.likes !== 1) {
+          $scope.plural = "likes";
+        } else if ($scope.likes === 1){
+          $scope.plural ="like";
+        } 
+      };
+      // Run Pluralrity checker immediately
+      $scope.checkP();
 
     }
   ]);
