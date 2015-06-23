@@ -6,9 +6,11 @@
   <link rel="stylesheet" href="css/vendor/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body ng-app="counterModule">
 
-  <div class="container">
+  <div class="container" ng-controller="counterController">
+
+    <button class="btn1" ng-click="count = count + 1" ng-init="count=0">{{ count }} like(s)!</button>
 
   </div>
 
