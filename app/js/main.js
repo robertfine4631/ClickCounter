@@ -5,15 +5,12 @@
   angular.module('counterModule', [])
 
   .controller('counterController', ['$scope', function ($scope){
-
-//Created array for likes to be counted in
-    $scope.allLikes = [];
-//Create constructor for each like
-    var like = function (addlike) {
-      this.like = addlike;
-    }
-
-
+      //Initialize Counter at 0 that will bind to home page
+      $scope.likes = 0;
+      //Make counting function
+      $scope.addLike = function () {
+        $scope.likes += 1;
+      };
 
 
     }
